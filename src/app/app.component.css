@@ -1,3 +1,23 @@
 .navbar {
-  color: #18a0ae;
+  background-color: #18a0ae;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.navbar a {
+  color: white;
+}
+
+.jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1441794016917-7b6933969960?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d2ab5919dbec02e79291e1afb94d6328&auto=format&fit=crop&w=2551&q=80");
+  height: 476px;
+  background-size: cover;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 80px;
+  font-style: italic;
+  padding-top: 20px;
+  color: white;
+  font-family: 'Libre Baskerville', serif;
 }
