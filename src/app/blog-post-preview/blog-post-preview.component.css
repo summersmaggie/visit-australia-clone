@@ -24,3 +24,7 @@ h2 {
 #popular-places {
   padding-top: 30px;
 }
+
+#edit {
+  color: red;
+}

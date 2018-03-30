@@ -34,7 +34,9 @@
 
 <div class="container">
   <app-blog-post-preview [childBlogPostList]="masterBlogPostList" (clickSender)="editBlogPost($event)" [childSelectedBlog]="selectedBlogPost"></app-blog-post-preview>
+</div>
 
+<div class="container">
   <app-edit-blog-post [childSelectedBlog]="selectedBlogPost" (clickedDone)="finishedEditing()" (clickedDelete)="deleteBlogPost()"></app-edit-blog-post>
 </div>
 

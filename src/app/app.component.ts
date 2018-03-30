@@ -24,4 +24,10 @@ export class AppComponent {
   finishedEditing() {
     this.selectedBlogPost = null;
   }
+
+  deleteBlogPost() {
+    let index = this.masterBlogPostList.indexOf(this.selectedBlogPost);
+    this.masterBlogPostList.splice(index, 1);
+    this.selectedBlogPost = null;
+  }
 }
