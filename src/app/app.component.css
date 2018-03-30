@@ -3,6 +3,13 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+.nav-link {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
 .navbar a {
   color: white;
 }
@@ -12,6 +19,7 @@
   height: 476px;
   background-size: cover;
   text-align: center;
+  border-radius: 0px;
 }
 
 .jumbotron h1 {

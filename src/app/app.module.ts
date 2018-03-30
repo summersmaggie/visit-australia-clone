@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { BlogPostPreviewComponent } from './blog-post-preview/blog-post-preview.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BlogPostPreviewComponent
   ],
   imports: [
     BrowserModule
