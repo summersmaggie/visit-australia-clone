@@ -33,7 +33,9 @@
 </div>
 
 <div class="container">
-  <app-blog-post-preview [childBlogPostList]="masterBlogPostList"></app-blog-post-preview>
+  <app-blog-post-preview [childBlogPostList]="masterBlogPostList" (clickSender)="editBlogPost($event)" [childSelectedBlog]="selectedBlogPost"></app-blog-post-preview>
+
+  <app-edit-blog-post [childSelectedBlog]="selectedBlogPost" (clickedDone)="finishedEditing()" (clickedDelete)="deleteBlogPost()"></app-edit-blog-post>
 </div>
 
 <footer class="footer">

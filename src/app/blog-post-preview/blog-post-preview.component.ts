@@ -10,6 +10,10 @@ import { blogPost } from '../blog-post.model';
 export class BlogPostPreviewComponent {
   @Input() childBlogPostList: blogPost[];
   @Input() childSelectedBlog: blogPost;
+  @Output() clickSender = new EventEmitter();
 
+  editButtonClicked(blogPostToEdit: blogPost) {
+    this.clickSender.emit(blogPostToEdit);
+  }
 
 }

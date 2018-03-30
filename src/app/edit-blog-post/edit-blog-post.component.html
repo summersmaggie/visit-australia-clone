@@ -1,0 +1,25 @@
+<div style="text-align:center">
+  <div id="edit-post">
+    <div *ngIf = childSelectedBlog>
+      <h5>{{childSelectedBlog.title}}</h5>
+      <label>Edit Blog Post Title:</label>
+      <input [(ngModel)]="childSelectedBlog.title">
+      <h5>{{childSelectedBlog.author}}</h5>
+      <label>Edit Blog Post Author:</label>
+      <input [(ngModel)]="childSelectedBlog.author">
+      <h5>{{childSelectedBlog.preview}}</h5>
+      <label>Edit Blog Post Preview:</label>
+      <input [(ngModel)]="childSelectedBlog.preview">
+      <h5>{{childSelectedBlog.content}}</h5>
+      <label>Edit Blog Post Content:</label>
+      <input [(ngModel)]="childSelectedBlog.content">
+      <h5>{{childSelectedBlog.tags}}</h5>
+      <label>Edit Blog Post Tags:</label>
+      <input [(ngModel)]="childSelectedBlog.tags">
+      <label>Edit Blog Post Image:</label>
+      <input [(ngModel)]="childSelectedBlog.image">
+      <button type="submit" (click)="finishedEditing()">Done</button>
+      <button type="submit" (click)="deleteRecipe()">Delete</button>
+    </div>
+  </div>
+</div>

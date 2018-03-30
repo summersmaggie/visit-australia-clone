@@ -7,6 +7,7 @@ import { blogPost } from './blog-post.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public selectedBlogPost = null;
   title = 'Visit Australia';
 
   masterBlogPostList: blogPost[] = [
@@ -15,4 +16,12 @@ export class AppComponent {
     new blogPost("20 must-do activities in Australia", "Kate Cox", "These 20 activites could all be highlights of your trip to Australia. How will you choose which ones to do?", "The Whitsunday Islands offer some of the world's finest sailing, with mostly perfect winds, calm seas, beautiful scenery and 74 islands to hop through (69 of which are uninhabited). It's called bareboating: hiring a boat, stocking it with provisions and friends and sailing off into the sunset. Even if you have no sailing experience, companies such as  will give you a yacht and a safety briefing and then set you free, with the requirement that you respond to their twice-daily radio schedule to say where you are and where you're going. Leave from the coastal town of Airlie Beach or have your vessel delivered to Hamilton or Hayman Island. Prices start at AUD$365 a night for a six-person yacht.", ["trip ideas", "activites", "things to do", "Australian adventure"], "http://www.exploreaustralia.net.au/images/content/rec/91/45791-582ff300.jpg"),
     new blogPost("Guide to the Great Barrier Reef", "Jac Taylor", "Let us inspire you with our guide to things to do on the Great Barrier Reef. Sail the Whitsundays, seaplane over heart reef...", "Home to diverse marine life of the most vivid colours, the Great Barrier Reef offers the opportunity for great adventure, whether you do it in luxury or on a budget. Explore the stunning Whitsunday Islands, trek the ancient Daintree Rainforest or relax on luxurious tropical islands such as Hayman and Lizard. Island-hop or stay in one of the many coastal getaways such as Cairns, Hervey Bay, Mission Beach and Port Douglas.", ["places to go", "cairns and surrounds", "guide", "great barrier reef"], "https://www.businessdestinations.com/wp-content/uploads/2017/02/E011_rt-featured.jpg")
   ];
+
+  editBlogPost(clickedBlogPost) {
+    this.selectedBlogPost = clickedBlogPost;
+  }
+
+  finishedEditing() {
+    this.selectedBlogPost = null;
+  }
 }
