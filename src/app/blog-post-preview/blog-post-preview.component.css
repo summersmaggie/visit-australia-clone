@@ -20,3 +20,7 @@ h2 {
 .card-body {
   font-weight: 100;
 }
+
+#popular-places {
+  padding-top: 30px;
+}
