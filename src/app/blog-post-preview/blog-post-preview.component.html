@@ -1,3 +1,18 @@
-<p>
-  blog-post-preview works!
-</p>
+<div class="container">
+  <h3>Experiences for the first-time traveller</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <h4 *ngFor="let blogPost of childBlogPostList">{{blogPost.title}}, {{blogPost.author}}, {{blogPost.content}}</h4>
+      <!-- <p>{{blogPost.author}}</p>
+      <p>{{blogPost.content}}</p> -->
+
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
