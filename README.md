@@ -1,27 +1,63 @@
-# VisitAustralia
+# _Visit Australia_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+##### Epicodus - Week 3 JavaScript Code Review - 03/30/2018
 
-## Development server
+## _By Maggie Summers_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+A clone of the website VisitAustralia.com built with Angular.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<!-- <kbd><img src= ></kbd> -->
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Features
 
-## Running unit tests
+* As a user, I should be welcomed to the website with a welcome page and a navigation bar.  
+* As a user, I want to see all the things I can learn about Australia right when I land on the page, broken up into Places To Go, Things To Do, Plan Your Trip, and Offers.
+* As a user,
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+```
+Application: Angular CLI, TypeScript, Bootstrap, HTML
+Environment: ng, npm, webpack, tslint
+API:
+Database: Firebase
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Installation
 
-## Further help
+```
+$ git clone https://github.com/summersmaggie/visit-australia
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+_Requires node.js; instructions to install:_ https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js
+
+Install required npm packages and dependencies:
+
+```
+$ npm install
+```
+
+[hold for database setup instructions]
+
+Navigate to `http://localhost:4200/` for a dev server:
+
+```
+$ ng serve
+```
+
+## Known Bugs
+
+ _No known bugs at this time._
+
+## Support and contact details
+
+ _To suggest changes, submit a pull request in the GitHub repository._
+
+## License
+
+ _Licensed under MIT license_
+
+Copyright 2018 **Maggie Summers**
