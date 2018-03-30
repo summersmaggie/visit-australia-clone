@@ -8,8 +8,7 @@
 
 A clone of the website Australia.com, built with Angular.
 
-<!-- <kbd><img src= ></kbd> -->
-
+<kbd><img src="src/img/homepage.png"></img></kbd>
 
 ## Features
 
