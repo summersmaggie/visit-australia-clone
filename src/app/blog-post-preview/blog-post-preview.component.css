@@ -1,12 +1,22 @@
 #blog-post-preview {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
 }
 
-h3 {
-  color: #686868
+h2 {
+  color: #686868;
+  margin-bottom: 20px;
 }
 
 .card {
   height: calc(100% - 15px);
   margin-bottom: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-body {
+  font-weight: 100;
 }

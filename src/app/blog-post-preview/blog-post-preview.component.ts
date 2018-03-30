@@ -9,6 +9,7 @@ import { blogPost } from '../blog-post.model';
 
 export class BlogPostPreviewComponent {
   @Input() childBlogPostList: blogPost[];
+  @Input() childSelectedBlog: blogPost;
 
 
 }
