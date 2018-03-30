@@ -6,16 +6,19 @@
 
 ## Description
 
-A clone of the website VisitAustralia.com built with Angular.
+A clone of the website Australia.com, built with Angular.
 
 <!-- <kbd><img src= ></kbd> -->
 
 
 ## Features
 
-* As a user, I should be welcomed to the website with a welcome page and a navigation bar.  
-* As a user, I want to see all the things I can learn about Australia right when I land on the page, broken up into Places To Go, Things To Do, Plan Your Trip, and Offers.
-* As a user,
+* As a user, I should be welcomed to the website with a homepage page and a navigation bar.  
+* As a user, I want to see all the things I can learn about Australia right when I land on the page, broken up into Places To Go, Things To Do, Plan Your Trip, and Offers. These categories can then be clicked to pages that contain blog posts relevant to that subject.
+* As a user, I want to view blog posts on the homepage, broken out by Experiences for the first-time traveler, Popular places, Featured offers, and Traveler essentials. For each blog post, I need to see title, author, image and blog post content.
+* As a user, I want to be able to search the website for blog posts that match my search.
+* As a user, I want to view Visit Australia's Instagram feed on the homepage.  
+* As an employee, I want to add new blog posts, update current blog posts, and delete existing blog posts.
 
 ## Technologies Used
 
@@ -40,7 +43,7 @@ Install required npm packages and dependencies:
 $ npm install
 ```
 
-[hold for database setup instructions]
+<!-- [hold for database setup instructions] -->
 
 Navigate to `http://localhost:4200/` for a dev server:
 
