@@ -3,5 +3,10 @@
 }
 
 h3 {
-  color: #686868	
+  color: #686868
+}
+
+.card {
+  height: calc(100% - 15px);
+  margin-bottom: 15px;
 }
