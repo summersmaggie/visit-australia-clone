@@ -1,18 +1,33 @@
-<div class="container">
+<div class="container" id=blog-post-preview>
   <h3>Experiences for the first-time traveller</h3>
-  <br>
   <div class="row">
-    <div class="col-sm">
-      <h4 *ngFor="let blogPost of childBlogPostList">{{blogPost.title}}, {{blogPost.author}}, {{blogPost.content}}</h4>
-      <!-- <p>{{blogPost.author}}</p>
-      <p>{{blogPost.content}}</p> -->
+    <div class="col-sm" *ngFor="let blogPost of childBlogPostList | slice:0:3; let i=index">
+      <div class="card">
+        <img class="card-img-top" src={{blogPost.image}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{blogPost.title}}</h5>
+          <h6 class="card-text"><em>{{blogPost.author}}</em></h6>
+          <p class="card-text">{{blogPost.preview}}</p>
+          <a href="#"><em>READ MORE...</em></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
+  <hr>
+
+  <h3>Popular Places </h3>
+  <div class="row">
+    <div class="col-sm" *ngFor="let blogPost of childBlogPostList | slice:3:4; let i=index">
+      <div class="card">
+        <img class="card-img-top" src={{blogPost.image}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{blogPost.title}}</h5>
+          <h6 class="card-text"><em>{{blogPost.author}}</em></h6>
+          <p class="card-text">{{blogPost.preview}}</p>
+          <a href="#"><em>READ MORE...</em></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

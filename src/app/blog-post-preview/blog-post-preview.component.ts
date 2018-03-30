@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { blogPost } from '../blog-post.model';
-
 
 @Component({
   selector: 'app-blog-post-preview',
@@ -8,14 +7,8 @@ import { blogPost } from '../blog-post.model';
   styleUrls: ['./blog-post-preview.component.css']
 })
 
-export class BlogPostPreviewComponent implements OnInit {
+export class BlogPostPreviewComponent {
   @Input() childBlogPostList: blogPost[];
 
-  console.log(blogPost);
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
