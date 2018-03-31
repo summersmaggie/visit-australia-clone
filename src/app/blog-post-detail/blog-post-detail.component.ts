@@ -13,7 +13,7 @@ import { BlogpostService } from '../blogpost.service';
 export class BlogPostDetailComponent implements OnInit {
   blogPostId: number;
   blogPostToDisplay: blogPost;
-
+  
   constructor(private route: ActivatedRoute, private location: Location, private blogpostService: BlogpostService ) { }
 
   ngOnInit() {
