@@ -10,17 +10,4 @@ export class AppComponent {
   public selectedBlogPost = null;
   title = 'Visit Australia';
 
-  editBlogPost(clickedBlogPost) {
-    this.selectedBlogPost = clickedBlogPost;
-  }
-
-  finishedEditing() {
-    this.selectedBlogPost = null;
-  }
-
-  // deleteBlogPost() {
-  //   let index = this.masterBlogPostList.indexOf(this.selectedBlogPost);
-  //   this.masterBlogPostList.splice(index, 1);
-  //   this.selectedBlogPost = null;
-  // }
 }

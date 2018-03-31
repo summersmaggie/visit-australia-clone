@@ -25,12 +25,9 @@ export class EditBlogPostComponent implements OnInit {
     this.blogPostToDisplay = this.blogpostService.getBlogPostById(this.blogPostId);
   }
 
-  // finishedEditing(clickedBlogPost: blogPost) {
-  //   this.route.navigate([""]);
-  //   console.log("hi");
-  // }
-
-  // deleteBlogPost() {
-  //   this.clickedDelete.emit();
-  // }
+  deleteBlogPost() {
+    let index = this.blogPosts.indexOf(this.blogPostToDisplay);
+    this.blogPosts.splice(index, 1);
+    this.blogPostToDisplay = null;
+  }
 }
