@@ -18,6 +18,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Offers</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about">About</a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -32,20 +35,22 @@
   </div>
 </div>
 
-<div class="container">
-  <app-blog-post-preview [childBlogPostList]="masterBlogPostList" (clickSender)="editBlogPost($event)" [childSelectedBlog]="selectedBlogPost"></app-blog-post-preview>
-</div>
 
 <div class="container">
-  <app-edit-blog-post [childSelectedBlog]="selectedBlogPost" (clickedDone)="finishedEditing()" (clickedDelete)="deleteBlogPost()"></app-edit-blog-post>
+  <router-outlet></router-outlet>
 </div>
 
 <footer class="footer">
   <div class="container" id="footer-text">
     <a>Admin</a>
     <br>
-    <a routerLink="about">About</a>
-    <br>
     <a>Add Blog Post</a>
   </div>
 </footer>
+<!-- <div class="container">
+  <app-blog-post-preview [childBlogPostList]="masterBlogPostList" (clickSender)="editBlogPost($event)" [childSelectedBlog]="selectedBlogPost"></app-blog-post-preview>
+</div>
+
+<div class="container">
+  <app-edit-blog-post [childSelectedBlog]="selectedBlogPost" (clickedDone)="finishedEditing()" (clickedDelete)="deleteBlogPost()"></app-edit-blog-post>
+</div> -->
