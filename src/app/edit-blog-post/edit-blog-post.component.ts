@@ -26,4 +26,3 @@ export class EditBlogPostComponent implements OnInit {
   // deleteBlogPost() {
   //   this.clickedDelete.emit();
   // }
-}
