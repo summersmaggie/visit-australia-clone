@@ -21,8 +21,8 @@ export class BlogPostPreviewComponent {
     new blogPost("Guide to Perth", "Fleur Bainger", "Discover Perth's city life, from small bars in the urban villages to the historic port town of Fremantle. Perth also has beautiful beaches...", "Nature and urban life exist in harmony in Perth, on Australia's west coast. Here, where the locals soak up more sunny days than in any other Australian capital city, you can visit nearby Rottnest Island, walk in leafy Kings Park and tour Swan Valley vineyards. For local culture, wander the nearby city of Fremantle's winding portside streets and Perth city centre's museum and gallery precinct.", ["places to go", "perth and surrounds", "guide", "perth"], "https://dynaimage.cdn.cnn.com/cnn/q_auto,w_531,c_fill,g_auto,h_299,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F171122145538-perth-kings-park4.jpg", 6)
   ];
 
-  editButtonClicked(blogPostToEdit: blogPost) {
-    this.router.navigate(['edit', blogPostToEdit.id]);
+  goToEditPage(clickedBlogPost: blogPost) {
+    this.router.navigate(['edit', clickedBlogPost.id]);
   }
 
   goToDetailPage(clickedBlogPost: blogPost) {

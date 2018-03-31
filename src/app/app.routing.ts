@@ -11,7 +11,7 @@ const appRoutes: Routes = [
     component: BlogPostPreviewComponent
   },
   {
-    path: 'edit',
+    path: 'edit/:id',
     component: EditBlogPostComponent
   },
   {

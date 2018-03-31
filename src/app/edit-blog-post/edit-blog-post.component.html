@@ -1,26 +1,29 @@
-<div *ngIf = childSelectedBlog>
+<div *ngFor="let blogPost of blogPosts">
   <div class="container" id="edit-blog-post">
-    <h5>{{childSelectedBlog.title}}</h5>
+    <h5>{{blogPost.title}}</h5>
     <label>Edit Blog Post Title:</label>
-    <input [(ngModel)]="childSelectedBlog.title">
-    <h5>{{childSelectedBlog.author}}</h5>
+    <input [(ngModel)]="blogPost.title">
+    <h5>{{blogPost.author}}</h5>
     <label>Edit Blog Post Author:</label>
-    <input [(ngModel)]="childSelectedBlog.author">
-    <h5>{{childSelectedBlog.preview}}</h5>
+    <input [(ngModel)]="blogPost.author">
+    <h5>{{blogPost.preview}}</h5>
     <label>Edit Blog Post Preview:</label>
-    <input [(ngModel)]="childSelectedBlog.preview">
-    <h5>{{childSelectedBlog.content}}</h5>
+    <input [(ngModel)]="blogPost.preview">
+    <h5>{{blogPost.content}}</h5>
     <label>Edit Blog Post Content:</label>
-    <input [(ngModel)]="childSelectedBlog.content">
-    <h5>{{childSelectedBlog.tags}}</h5>
+    <input [(ngModel)]="blogPost.content">
+    <h5>{{blogPost.tags}}</h5>
     <label>Edit Blog Post Tags:</label>
-    <input [(ngModel)]="childSelectedBlog.tags">
+    <input [(ngModel)]="blogPost.tags">
     <br>
     <label>Edit Blog Post Image:</label>
-    <input [(ngModel)]="childSelectedBlog.image">]
+    <input [(ngModel)]="blogPost.image">]
     <br>
     <button type="submit" (click)="finishedEditing()">Done</button>
     <br>
     <button type="submit" (click)="deleteBlogPost()">Delete</button>
   </div>
 </div>
+
+<h2>This blog post to edit has an id number: {{blogPostId}}</h2>
+<h2>{{blogPost.title}}</h2>
