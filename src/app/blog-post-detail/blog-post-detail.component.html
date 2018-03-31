@@ -1,12 +1,14 @@
-<div class="jumbotron" style="background-image:" ng-model="blogPostToDisplay.image">
+<!-- style="background-image:" ng-model="blogPostToDisplay.image"> -->
+<div class="jumbotron">
   <div class="container">
     <h1>{{blogPostToDisplay.title}}</h1>
   </div>
 </div>
 
-
-<div class="container">
-  <h3>{{blogPostToDisplay.title}}</h3>
-  <h4><em>{{blogPostToDisplay.author}}</em></h4>
+<div class="container" id="post-body">
+  <h4><em>{{blogPostToDisplay.preview}}</em></h4>
+  <hr>
+  <p><strong>By {{blogPostToDisplay.author}}</strong></p>
+  <hr>
   <p>{{blogPostToDisplay.content}}</p>
 </div>
