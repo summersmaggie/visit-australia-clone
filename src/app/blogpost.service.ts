@@ -11,4 +11,11 @@ export class BlogpostService {
     return BLOGPOSTS;
   }
 
+  getBlogPostById(blogPostId: number) {
+    for (var i = 0; i < BLOGPOSTS.length - 1; i++) {
+      if (BLOGPOSTS[i].id === blogPostId) {
+        return BLOGPOSTS[i];
+      }
+    }
+  }
 }

@@ -1,29 +1,24 @@
-<div *ngFor="let blogPost of blogPosts">
-  <div class="container" id="edit-blog-post">
-    <h5>{{blogPost.title}}</h5>
-    <label>Edit Blog Post Title:</label>
-    <input [(ngModel)]="blogPost.title">
-    <h5>{{blogPost.author}}</h5>
-    <label>Edit Blog Post Author:</label>
-    <input [(ngModel)]="blogPost.author">
-    <h5>{{blogPost.preview}}</h5>
-    <label>Edit Blog Post Preview:</label>
-    <input [(ngModel)]="blogPost.preview">
-    <h5>{{blogPost.content}}</h5>
-    <label>Edit Blog Post Content:</label>
-    <input [(ngModel)]="blogPost.content">
-    <h5>{{blogPost.tags}}</h5>
-    <label>Edit Blog Post Tags:</label>
-    <input [(ngModel)]="blogPost.tags">
-    <br>
-    <label>Edit Blog Post Image:</label>
-    <input [(ngModel)]="blogPost.image">]
-    <br>
-    <button type="submit" (click)="finishedEditing()">Done</button>
-    <br>
-    <button type="submit" (click)="deleteBlogPost()">Delete</button>
-  </div>
+<div class="container" id="edit-blog-post">
+  <h5>{{blogPostToDisplay.title}}</h5>
+  <label>Edit Blog Post Title:</label>
+  <input [(ngModel)]="blogPostToDisplay.title">
+  <h5>{{blogPostToDisplay.author}}</h5>
+  <label>Edit Blog Post Author:</label>
+  <input [(ngModel)]="blogPostToDisplay.author">
+  <h5>{{blogPostToDisplay.preview}}</h5>
+  <label>Edit Blog Post Preview:</label>
+  <input [(ngModel)]="blogPostToDisplay.preview">
+  <h5>{{blogPostToDisplay.content}}</h5>
+  <label>Edit Blog Post Content:</label>
+  <input [(ngModel)]="blogPostToDisplay.content">
+  <h5>{{blogPostToDisplay.tags}}</h5>
+  <label>Edit Blog Post Tags:</label>
+  <input [(ngModel)]="blogPostToDisplay.tags">
+  <br>
+  <label>Edit Blog Post Image:</label>
+  <input [(ngModel)]="blogPostToDisplay.image">]
+  <br>
+  <button type="submit" (click)="finishedEditing()">Done</button>
+  <br>
+  <button type="submit" (click)="deleteBlogPost()">Delete</button>
 </div>
-
-<h2>This blog post to edit has an id number: {{blogPostId}}</h2>
-<h2>{{blogPost.title}}</h2>
