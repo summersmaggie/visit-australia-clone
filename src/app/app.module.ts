@@ -7,6 +7,7 @@ import { EditBlogPostComponent } from './edit-blog-post/edit-blog-post.component
 import { AddBlogPostComponent } from './add-blog-post/add-blog-post.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
+import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     BlogPostPreviewComponent,
     EditBlogPostComponent,
     AddBlogPostComponent,
-    AboutComponent
+    AboutComponent,
+    BlogPostDetailComponent
   ],
   imports: [
     BrowserModule,

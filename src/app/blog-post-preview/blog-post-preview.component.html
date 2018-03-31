@@ -8,7 +8,7 @@
           <div class="card-body">
             <h5 class="card-title">{{blogPost.title}}</h5>
             <p class="card-text">{{blogPost.preview}}</p>
-            <a href="#"><em>READ MORE...</em></a>
+            <a (click)="goToDetailPage(blogpost)"><em>READ MORE...</em></a>
             <br>
             <a (click)="editButtonClicked(blogPost)" id="edit"><em>Edit This Blog Post</em></a>
           </div>
@@ -27,7 +27,7 @@
             <h5 class="card-title">{{blogPost.title}}</h5>
             <h6 class="card-text"><em>{{blogPost.author}}</em></h6>
             <p class="card-text">{{blogPost.preview}}</p>
-            <a href="#"><em>READ MORE...</em></a>
+            <a (click)="goToDetailPage(blogPost)"><em>READ MORE...</em></a>
             <br>
             <a (click)="editButtonClicked(blogPost)" id="edit"><em>Edit This Blog Post</em></a>
           </div>
