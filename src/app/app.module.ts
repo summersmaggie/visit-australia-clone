@@ -8,7 +8,16 @@ import { AddBlogPostComponent } from './add-blog-post/add-blog-post.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -22,7 +31,9 @@ import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.com
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

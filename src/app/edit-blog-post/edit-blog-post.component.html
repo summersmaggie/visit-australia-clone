@@ -1,4 +1,11 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{blogPostToDisplay.title}}</h1>
+  </div>
+</div>
+
 <div class="container" id="edit-blog-post">
+  <h2>Edit this post</h2>
   <h5>{{blogPostToDisplay.title}}</h5>
   <label>Edit Blog Post Title:</label>
   <input [(ngModel)]="blogPostToDisplay.title">
@@ -20,5 +27,5 @@
   <br>
   <button type="submit" routerLink="">Done</button>
   <br>
-  <button type="submit" (click)="deleteBlogPost()">Delete</button>
+  <!-- <button type="submit" (click)="deleteBlogPost()">Delete</button> -->
 </div>
