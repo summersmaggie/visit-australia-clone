@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 import { blogPost } from '../blog-post.model';
 import { BlogpostService } from '../blogpost.service';
 
@@ -13,6 +14,7 @@ import { BlogpostService } from '../blogpost.service';
 export class EditBlogPostComponent implements OnInit {
   blogPostId: number;
   blogPostToDisplay: blogPost;
+  blogPosts: blogPost[];
 
   constructor(private route: ActivatedRoute, private location: Location, private blogpostService: BlogpostService) {}
 
@@ -22,11 +24,13 @@ export class EditBlogPostComponent implements OnInit {
     });
     this.blogPostToDisplay = this.blogpostService.getBlogPostById(this.blogPostId);
   }
-}
-  // finishedEditing() {
-  //   this.clickedDone.emit();
+
+  // finishedEditing(clickedBlogPost: blogPost) {
+  //   this.route.navigate([""]);
+  //   console.log("hi");
   // }
-  //
+
   // deleteBlogPost() {
   //   this.clickedDelete.emit();
   // }
+}

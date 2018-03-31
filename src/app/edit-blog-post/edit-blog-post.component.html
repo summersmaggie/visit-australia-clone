@@ -18,7 +18,7 @@
   <label>Edit Blog Post Image:</label>
   <input [(ngModel)]="blogPostToDisplay.image">]
   <br>
-  <button type="submit" (click)="finishedEditing()">Done</button>
+  <button type="submit" routerLink="">Done</button>
   <br>
-  <button type="submit" (click)="deleteBlogPost()">Delete</button>
+  <button type="submit" (click)="deleteBlogPost(blogPost)">Delete</button>
 </div>
