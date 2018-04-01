@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { blogPost } from '../blog-post.model';
 import { Router } from '@angular/router';
 import { BlogpostService } from '../blogpost.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-blog-post-preview',
@@ -11,7 +12,7 @@ import { BlogpostService } from '../blogpost.service';
 })
 
 export class BlogPostPreviewComponent implements OnInit {
-  blogPosts: blogPost[];  
+  blogPosts: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private blogpostService: BlogpostService) {}
 

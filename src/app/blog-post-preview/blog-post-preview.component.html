@@ -8,7 +8,7 @@
   <div id="first-time-traveler">
     <h2>Experiences for the first-time traveller</h2>
     <div class="row">
-      <div class="col-sm" *ngFor="let blogPost of blogPosts | slice:0:3; let i=index">
+      <div class="col-sm" *ngFor="let blogPost of blogPosts | async | slice:0:3; let i=index">
         <div class="card border-light mb-3">
           <img class="card-img-top" src={{blogPost.image}} alt="Card image cap">
           <div class="card-body">
@@ -26,7 +26,7 @@
   <div id="popular-places">
     <h2>Popular Places</h2>
     <div class="row">
-      <div class="col-sm" *ngFor="let blogPost of blogPosts | slice:3:7; let i=index">
+      <div class="col-sm" *ngFor="let blogPost of blogPosts | async | slice:3:7; let i=index">
         <div class="card border-light mb-3">
           <img class="card-img-top" src={{blogPost.image}} alt="Card image cap">
           <div class="card-body">
