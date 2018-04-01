@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 import { blogPost } from '../blog-post.model';
 import { BlogpostService } from '../blogpost.service';
 
@@ -12,22 +9,20 @@ import { BlogpostService } from '../blogpost.service';
   providers: [BlogpostService]
 })
 export class EditBlogPostComponent implements OnInit {
-  blogPostId: number;
-  blogPostToDisplay: blogPost;
-  blogPosts: blogPost[];
+  @Input() selectedBlogPost;
 
-  constructor(private route: ActivatedRoute, private location: Location, private blogpostService: BlogpostService) {}
+  constructor(private blogPostService: BlogpostService) {}
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.blogPostId = parseInt(urlParameters['id']);
-    });
-    this.blogPostToDisplay = this.blogpostService.getBlogPostById(this.blogPostId);
   }
 
-  deleteBlogPost() {
-    let index = this.blogPosts.indexOf(this.blogPostToDisplay);
-    this.blogPosts.splice(index, 1);
-    this.blogPostToDisplay = null;
+  beginUpdatingBlogPost(blogPostToUpdate) {
+    this.blogPostService.updateBlogPost(blogPostToUpdate);
   }
+  //
+  // deleteBlogPost() {
+  //   let index = this.blogPosts.indexOf(this.blogPostToDisplay);
+  //   this.blogPosts.splice(index, 1);
+  //   this.blogPostToDisplay = null;
+  // }
 }

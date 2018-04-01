@@ -16,7 +16,9 @@
             <p class="card-text">{{blogPost.preview}}</p>
             <a (click)="goToDetailPage(blogPost)"><em>READ MORE...</em></a>
             <br>
-            <a (click)="goToEditPage(blogPost)" id="edit"><em>Edit This Blog Post</em></a>
+              <div *ngIf="currentRoute === '/admin'">
+                <app-edit-blog-post [selectedBlogPost]="blogPost"></app-edit-blog-post>
+              </div>
           </div>
         </div>
       </div>
@@ -35,7 +37,9 @@
             <p class="card-text">{{blogPost.preview}}</p>
             <a (click)="goToDetailPage(blogPost)"><em>READ MORE...</em></a>
             <br>
-            <a (click)="goToEditPage(blogPost)" id="edit"><em>Edit This Blog Post</em></a>
+            <div *ngIf="currentRoute === '/admin'">
+              <app-edit-blog-post [selectedBlogPost]="blogPost"></app-edit-blog-post>
+            </div>
           </div>
         </div>
       </div>

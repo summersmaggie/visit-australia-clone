@@ -1,14 +1,14 @@
 <!-- style="background-image:" ng-model="blogPostToDisplay.image"> -->
 <div class="jumbotron">
   <div class="container">
-    <h1>{{blogPostToDisplay.title}}</h1>
+    <h1>{{(blogPostToDisplay | async)?.title}}</h1>
   </div>
 </div>
 
 <div class="container" id="post-body">
-  <h4><em>{{blogPostToDisplay.preview}}</em></h4>
+  <h4><em>{{(blogPostToDisplay | async)?.preview}}</em></h4>
   <hr>
-  <p><strong>By {{blogPostToDisplay.author}}</strong></p>
+  <p><strong>By {{(blogPostToDisplay | async)?.author}}</strong></p>
   <hr>
-  <p>{{blogPostToDisplay.content}}</p>
+  <p>{{(blogPostToDisplay | async)?.content}}</p>
 </div>

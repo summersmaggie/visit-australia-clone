@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { blogPost } from '../blog-post.model';
 import { BlogpostService } from '../blogpost.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-blog-post-detail',
@@ -11,16 +12,15 @@ import { BlogpostService } from '../blogpost.service';
   providers: [BlogpostService]
 })
 export class BlogPostDetailComponent implements OnInit {
-  blogPostId: number;
-  blogPostToDisplay: blogPost;
-  
+  blogPostId: string;
+  blogPostToDisplay;
+
   constructor(private route: ActivatedRoute, private location: Location, private blogpostService: BlogpostService ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.blogPostId = parseInt(urlParameters['id']);
+      this.blogPostId = urlParameters['id'];
     });
     this.blogPostToDisplay = this.blogpostService.getBlogPostById(this.blogPostId);
   }
-
 }

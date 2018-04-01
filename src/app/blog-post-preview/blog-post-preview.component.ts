@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 
 export class BlogPostPreviewComponent implements OnInit {
   blogPosts: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private blogpostService: BlogpostService) {}
 
@@ -20,11 +21,11 @@ export class BlogPostPreviewComponent implements OnInit {
     this.blogPosts = this.blogpostService.getBlogPosts();
   }
 
-  // goToEditPage(clickedBlogPost: blogPost) {
-  //   this.router.navigate(['edit', clickedBlogPost.id]);
-  // }
-  //
-  // goToDetailPage(clickedBlogPost: blogPost) {
-  //   this.router.navigate(['blogPost', clickedBlogPost.id]);
-  // };
+  goToEditPage(clickedBlogPost) {
+    this.router.navigate(['edit', clickedBlogPost.$key]);
+  }
+
+  goToDetailPage(clickedBlogPost) {
+    this.router.navigate(['blogPost', clickedBlogPost.$key]);
+  };
 }

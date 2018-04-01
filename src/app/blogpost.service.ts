@@ -17,11 +17,12 @@ export class BlogpostService {
   addBlogPost(newBlogPost: blogPost) {
     this.blogPosts.push(newBlogPost);
   }
-  // getBlogPostById(blogPostId: number) {
-  //   for (var i = 0; i < BLOGPOSTS.length - 1; i++) {
-  //     if (BLOGPOSTS[i].id === blogPostId) {
-  //       return BLOGPOSTS[i];
-  //     }
-  //   }
-  // }
+  getBlogPostById(blogPostId: number) {
+    return this.database.object('/blogPosts/' + blogPostId);
+  }
+
+  updateBlogPost(localUpdatedBlogPost) {
+    let blogPostEntryInFirebase = this.getBlogPostById(localUpdatedBlogPost.$key);
+    blogPostEntryInFirebase.update({title: localUpdatedBlogPost.title, author: localUpdatedBlogPost.author, preview: localUpdatedBlogPost.preview, content: localUpdatedBlogPost.content, tags: localUpdatedBlogPost.tags, image: localUpdatedBlogPost.image});
+  }
 }
