@@ -20,11 +20,11 @@ export class BlogPostPreviewComponent implements OnInit {
     this.blogPosts = this.blogpostService.getBlogPosts();
   }
 
-  goToEditPage(clickedBlogPost: blogPost) {
-    this.router.navigate(['edit', clickedBlogPost.id]);
-  }
-
-  goToDetailPage(clickedBlogPost: blogPost) {
-    this.router.navigate(['blogPost', clickedBlogPost.id]);
-  };
+  // goToEditPage(clickedBlogPost: blogPost) {
+  //   this.router.navigate(['edit', clickedBlogPost.id]);
+  // }
+  //
+  // goToDetailPage(clickedBlogPost: blogPost) {
+  //   this.router.navigate(['blogPost', clickedBlogPost.id]);
+  // };
 }

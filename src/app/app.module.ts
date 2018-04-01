@@ -11,6 +11,7 @@ import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.com
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     EditBlogPostComponent,
     AddBlogPostComponent,
     AboutComponent,
-    BlogPostDetailComponent
+    BlogPostDetailComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

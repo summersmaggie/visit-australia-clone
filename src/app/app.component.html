@@ -32,11 +32,7 @@
 <router-outlet></router-outlet>
 
 <footer class="footer">
-  <div class="container" id="footer-text">
-    <a>Admin</a>
-    <br>
-    <a>Add Blog Post</a>
-  </div>
+  <a routerLink="admin">Admin</a>
 </footer>
 <!-- <div class="container">
   <app-blog-post-preview [childBlogPostList]="masterBlogPostList" (clickSender)="editBlogPost($event)" [childSelectedBlog]="selectedBlogPost"></app-blog-post-preview>
