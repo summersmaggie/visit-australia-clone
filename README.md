@@ -1,6 +1,6 @@
 # _Visit Australia_
 
-##### Epicodus - Week 3 JavaScript Code Review - 03/30/2018
+##### Epicodus - JavaScript Week 3 & 4 - Code Review - 03/30/2018, 04/06/2018
 
 ## _By Maggie Summers_
 
@@ -8,7 +8,7 @@
 
 A clone of the website Australia.com, built with Angular.
 
-<kbd><img src="src/img/homepage.png"></img></kbd>
+<kbd><img src="src/img/australia-clone.png"></img></kbd>
 
 ## Features
 

@@ -1,5 +1,5 @@
 <div class="container" id="edit-blog-post">
-  <h2>Edit this post</h2>
+  <h3>Edit this post</h3>
   <h5>{{selectedBlogPost.title}}</h5>
   <label>Edit Blog Post Title:</label>
   <input [(ngModel)]="selectedBlogPost.title">
@@ -17,7 +17,7 @@
   <input [(ngModel)]="selectedBlogPost.tags">
   <br>
   <label>Edit Blog Post Image:</label>
-  <input [(ngModel)]="selectedBlogPost.image">]
+  <input [(ngModel)]="selectedBlogPost.image">
   <br>
   <button (click)="beginUpdatingBlogPost(selectedBlogPost)">Done</button>
   <br>

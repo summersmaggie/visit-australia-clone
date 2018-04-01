@@ -1,5 +1,9 @@
+<div>
+  <app-blog-post-preview></app-blog-post-preview>
+</div>
+
 <div class="container">
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="update-blog-post">
     <div class="panel-heading">
       <h3 class="panel-title">Add New Blog Post to Database</h3>
     </div>
@@ -43,8 +47,4 @@
       <button (click)="submitForm(newTitle.value, newAuthor.value, newPreview.value, newContent.value, newTags.value, newImage.value); newTitle.value=''; newAuthor.value=''; newPreview.value=''; newContent.value=''; newTags.value=''; newImage.value=''">Add</button>
     </div>
   </div>
-</div>
-
-<div>
-  <app-blog-post-preview></app-blog-post-preview>
 </div>

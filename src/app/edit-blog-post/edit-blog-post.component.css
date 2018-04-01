@@ -3,8 +3,9 @@
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 10px;
+  border: 1px solid black;
 }
 
-h2 {
+h3 {
   text-decoration: underline;
 }

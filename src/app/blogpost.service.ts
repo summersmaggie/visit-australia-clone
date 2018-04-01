@@ -17,6 +17,7 @@ export class BlogpostService {
   addBlogPost(newBlogPost: blogPost) {
     this.blogPosts.push(newBlogPost);
   }
+  
   getBlogPostById(blogPostId: number) {
     return this.database.object('/blogPosts/' + blogPostId);
   }
