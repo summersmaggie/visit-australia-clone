@@ -25,4 +25,9 @@ export class BlogpostService {
     let blogPostEntryInFirebase = this.getBlogPostById(localUpdatedBlogPost.$key);
     blogPostEntryInFirebase.update({title: localUpdatedBlogPost.title, author: localUpdatedBlogPost.author, preview: localUpdatedBlogPost.preview, content: localUpdatedBlogPost.content, tags: localUpdatedBlogPost.tags, image: localUpdatedBlogPost.image});
   }
+
+  deleteBlogPost(localBlogPostToDelete) {
+    let blogPostEntryInFirebase = this.getBlogPostById(localBlogPostToDelete.$key);
+    blogPostEntryInFirebase.remove();
+  }
 }

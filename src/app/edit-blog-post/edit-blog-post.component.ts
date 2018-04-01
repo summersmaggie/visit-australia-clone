@@ -19,10 +19,10 @@ export class EditBlogPostComponent implements OnInit {
   beginUpdatingBlogPost(blogPostToUpdate) {
     this.blogPostService.updateBlogPost(blogPostToUpdate);
   }
-  //
-  // deleteBlogPost() {
-  //   let index = this.blogPosts.indexOf(this.blogPostToDisplay);
-  //   this.blogPosts.splice(index, 1);
-  //   this.blogPostToDisplay = null;
-  // }
+
+  beginDeletingBlogPost(blogPostToDelete) {
+    if(confirm("Are you sure you want to delete this blog post?")) {
+      this.blogPostService.deleteBlogPost(blogPostToDelete);
+    }
+  }
 }
