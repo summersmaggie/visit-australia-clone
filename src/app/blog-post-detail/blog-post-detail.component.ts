@@ -19,7 +19,7 @@ export class BlogPostDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.blogPostId = urlParameters['id'];
+      this.blogPostId = urlParameters['id']
     });
     this.blogPostToDisplay = this.blogpostService.getBlogPostById(this.blogPostId);
   }
