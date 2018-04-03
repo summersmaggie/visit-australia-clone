@@ -8,7 +8,7 @@
 <div class="container" id="post-body">
   <h4><em>{{(blogPostToDisplay | async)?.preview}}</em></h4>
   <hr>
-  <p><strong>By {{(blogPostToDisplay | async)?.author}}</strong></p>
+  <p><strong>{{(blogPostToDisplay | async)?.author}}</strong></p>
   <hr>
   <p>{{(blogPostToDisplay | async)?.content}}</p>
 </div>
