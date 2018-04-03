@@ -6,7 +6,9 @@
 
 ## Description
 
-A clone of the website Australia.com, built with Angular.
+A clone of the website Australia.com, built with Angular and a database hosted on Firebase.
+
+View the deployed site here: https://visit-australia-clone.firebaseapp.com/.
 
 <kbd><img src="src/img/australia-clone.png"></img></kbd>
 
