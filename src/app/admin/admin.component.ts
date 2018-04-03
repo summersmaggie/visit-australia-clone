@@ -1,18 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { blogPost } from '../blog-post.model';
 import { BlogpostService } from '../blogpost.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [BlogpostService]
+  providers: [BlogpostService, AuthenticationService]
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent {
+  user;
+  private isLoggedIn: Boolean;
+  private userName: String;
 
-  constructor(private blogpostService: BlogpostService) { }
+  constructor(private blogpostService: BlogpostService, public authService: AuthenticationService) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+        this.userName = user.displayName;
+      }
+    });
+  }
 
-  ngOnInit() {
+  login() {
+    this.authService.login();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
   submitForm(title: string, author: string, preview: string, content: string, tags: string[], image: string) {
