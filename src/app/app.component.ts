@@ -12,8 +12,8 @@ export class AppComponent {
   public selectedBlogPost = null;
   title = 'Visit Australia';
   user;
-  private isLoggedIn: Boolean;
-  private userName: String;
+  public isLoggedIn: Boolean;
+  public userName: String;
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user => {

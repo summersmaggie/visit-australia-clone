@@ -11,10 +11,10 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class AdminComponent {
   user;
-  private isLoggedIn: Boolean;
-  private userName: String;
+  public isLoggedIn: Boolean;
+  public userName: String;
 
-  constructor(private blogpostService: BlogpostService, public authService: AuthenticationService) {
+  constructor(public blogpostService: BlogpostService, public authService: AuthenticationService) {
     this.authService.user.subscribe(user => {
       if (user == null) {
         this.isLoggedIn = false;
