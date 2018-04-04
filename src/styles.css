@@ -16,10 +16,11 @@
   color: white;
 }
 
-.footer {
+#footer {
   bottom: 0;
   width: 100%;
   height: 60px;
   background-color: #054263;
   padding: 15px;
+  color: white;
 }
